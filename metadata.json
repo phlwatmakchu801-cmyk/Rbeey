@@ -1,0 +1,6 @@
+{
+  "name": "เครื่องคำนวณหวยและเลขเด็ด",
+  "description": "แอปพลิเคชันคำนวณสูตรหวย วิเคราะห์สถิติตัวเลข สุ่มเลขมงคล พร้อมระบบบัญชีผู้ใช้สำหรับบันทึกสูตรและประวัติ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
