@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Kanit", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Cute & Soft Pastel Aesthetic Styles */
+.glow-gold {
+  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.25), 0 8px 10px -6px rgba(245, 158, 11, 0.25);
+}
+
+.glow-cute {
+  box-shadow: 0 15px 30px -10px rgba(244, 143, 177, 0.35), 0 10px 15px -10px rgba(244, 143, 177, 0.2);
+}
+
+.glow-mint {
+  box-shadow: 0 10px 25px -5px rgba(52, 211, 153, 0.25);
+}
+
+/* Fluffy bounce and soft transitions */
+.bouncy-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Base style resets with lovely light cream/pink gradient */
+html {
+  font-size: 17.5px; /* เพิ่มขนาดตัวหนังสือให้อ่านง่าย สบายตาขึ้น */
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #fff5f5 0%, #fff0f6 50%, #f3f0ff 100%);
+  color: #3f3f46; /* Soft charcoal */
+  min-height: 100vh;
+}
+
+/* --- THEME SYSTEM OVERRIDES --- */
+
+/* 1. PASTEL THEME (Default) */
+body.theme-pastel {
+  background: linear-gradient(135deg, #fff5f5 0%, #fff0f6 50%, #f3f0ff 100%) !important;
+  color: #3f3f46 !important;
+}
+
+/* 2. PURE WHITE HIGH CONTRAST */
+body.theme-light {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%) !important;
+  color: #0f172a !important;
+}
+.theme-light .bg-white,
+.theme-light header.bg-white\/90,
+.theme-light footer.bg-white\/70,
+.theme-light .bg-white\/70 {
+  background-color: #ffffff !important;
+}
+.theme-light .bg-rose-50\/60,
+.theme-light .bg-rose-50\/45,
+.theme-light .bg-rose-50\/50,
+.theme-light .bg-pink-50\/50,
+.theme-light .bg-slate-50,
+.theme-light .bg-slate-50\/50 {
+  background-color: #f1f5f9 !important;
+}
+.theme-light .border-pink-100,
+.theme-light .border-pink-100\/70,
+.theme-light .border-pink-100\/40,
+.theme-light .border-pink-200,
+.theme-light .border-slate-100,
+.theme-light .border-slate-200 {
+  border-color: #e2e8f0 !important;
+}
+.theme-light .text-slate-700,
+.theme-light .text-slate-800,
+.theme-light .text-slate-900,
+.theme-light .text-slate-600,
+.theme-light .text-slate-650 {
+  color: #1e293b !important;
+}
+.theme-light .text-slate-500,
+.theme-light .text-slate-400,
+.theme-light .text-slate-350 {
+  color: #475569 !important;
+}
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+/* 3. COZY CREAM YELLOW (EYE-CARE) */
+body.theme-warm {
+  background: linear-gradient(135deg, #fdf6e3 0%, #f4ebd0 50%, #ebdcb9 100%) !important;
+  color: #433422 !important;
+}
+.theme-warm .bg-white,
+.theme-warm header.bg-white\/90,
+.theme-warm footer.bg-white\/70,
+.theme-warm .bg-white\/70 {
+  background-color: #faf5e6 !important;
+}
+.theme-warm .bg-rose-50\/60,
+.theme-warm .bg-rose-50\/45,
+.theme-warm .bg-rose-50\/50,
+.theme-warm .bg-pink-50\/50,
+.theme-warm .bg-slate-50,
+.theme-warm .bg-slate-50\/50 {
+  background-color: #efe5cb !important;
+}
+.theme-warm .border-pink-100,
+.theme-warm .border-pink-100\/70,
+.theme-warm .border-pink-100\/40,
+.theme-warm .border-pink-200,
+.theme-warm .border-slate-100,
+.theme-warm .border-slate-200 {
+  border-color: #e0d5b5 !important;
+}
+.theme-warm .text-slate-700,
+.theme-warm .text-slate-800,
+.theme-warm .text-slate-900,
+.theme-warm .text-slate-600,
+.theme-warm .text-slate-650 {
+  color: #433422 !important;
+}
+.theme-warm .text-slate-500,
+.theme-warm .text-slate-400,
+.theme-warm .text-slate-350 {
+  color: #7c6b54 !important;
+}
+.theme-warm input,
+.theme-warm select,
+.theme-warm textarea {
+  background-color: #faf5e6 !important;
+  border-color: #dcd0b3 !important;
+  color: #433422 !important;
+}
+
+/* 4. NIGHT/DARK MODE */
+body.theme-night {
+  background: linear-gradient(135deg, #090d16 0%, #111827 50%, #030712 100%) !important;
+  color: #f1f5f9 !important;
+}
+.theme-night .bg-white,
+.theme-night header.bg-white\/90,
+.theme-night footer.bg-white\/70,
+.theme-night .bg-white\/70 {
+  background-color: #1e293b !important;
+}
+.theme-night .bg-rose-50\/60,
+.theme-night .bg-rose-50\/45,
+.theme-night .bg-rose-50\/50,
+.theme-night .bg-pink-50\/50,
+.theme-night .bg-slate-50,
+.theme-night .bg-slate-50\/50 {
+  background-color: #0f172a !important;
+}
+.theme-night .border-pink-100,
+.theme-night .border-pink-100\/70,
+.theme-night .border-pink-100\/40,
+.theme-night .border-pink-200,
+.theme-night .border-slate-100,
+.theme-night .border-slate-200 {
+  border-color: #334155 !important;
+}
+.theme-night .text-slate-700,
+.theme-night .text-slate-800,
+.theme-night .text-slate-900,
+.theme-night .text-slate-600,
+.theme-night .text-slate-650 {
+  color: #f1f5f9 !important;
+}
+.theme-night .text-slate-500,
+.theme-night .text-slate-400,
+.theme-night .text-slate-350 {
+  color: #94a3b8 !important;
+}
+.theme-night input,
+.theme-night select,
+.theme-night textarea {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+.theme-night .shadow-sm,
+.theme-night .shadow-md,
+.theme-night .shadow-xl {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 5. PURPLE THEME (สีม่วงมงคล) */
+body.theme-purple {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%) !important;
+  color: #3b0764 !important;
+}
+.theme-purple .bg-white,
+.theme-purple header.bg-white\/90,
+.theme-purple footer.bg-white\/70,
+.theme-purple .bg-white\/70 {
+  background-color: #fdfbfe !important;
+}
+.theme-purple .bg-rose-50\/60,
+.theme-purple .bg-rose-50\/45,
+.theme-purple .bg-rose-50\/50,
+.theme-purple .bg-pink-50\/50,
+.theme-purple .bg-slate-50,
+.theme-purple .bg-slate-50\/50 {
+  background-color: #f3e8ff !important;
+}
+.theme-purple .border-pink-100,
+.theme-purple .border-pink-100\/70,
+.theme-purple .border-pink-100\/40,
+.theme-purple .border-pink-200,
+.theme-purple .border-slate-100,
+.theme-purple .border-slate-200 {
+  border-color: #e9d5ff !important;
+}
+.theme-purple .text-slate-700,
+.theme-purple .text-slate-800,
+.theme-purple .text-slate-900,
+.theme-purple .text-slate-600,
+.theme-purple .text-slate-650 {
+  color: #3b0764 !important;
+}
+.theme-purple .text-slate-500,
+.theme-purple .text-slate-400,
+.theme-purple .text-slate-350 {
+  color: #6b21a8 !important;
+}
+.theme-purple input,
+.theme-purple select,
+.theme-purple textarea {
+  background-color: #fdfbfe !important;
+  border-color: #d8b4fe !important;
+  color: #3b0764 !important;
+}
+
+/* 6. BLUE THEME (สีฟ้านำโชค) */
+body.theme-blue {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%) !important;
+  color: #0369a1 !important;
+}
+.theme-blue .bg-white,
+.theme-blue header.bg-white\/90,
+.theme-blue footer.bg-white\/70,
+.theme-blue .bg-white\/70 {
+  background-color: #f8fafc !important;
+}
+.theme-blue .bg-rose-50\/60,
+.theme-blue .bg-rose-50\/45,
+.theme-blue .bg-rose-50\/50,
+.theme-blue .bg-pink-50\/50,
+.theme-blue .bg-slate-50,
+.theme-blue .bg-slate-50\/50 {
+  background-color: #e0f2fe !important;
+}
+.theme-blue .border-pink-100,
+.theme-blue .border-pink-100\/70,
+.theme-blue .border-pink-100\/40,
+.theme-blue .border-pink-200,
+.theme-blue .border-slate-100,
+.theme-blue .border-slate-200 {
+  border-color: #bae6fd !important;
+}
+.theme-blue .text-slate-700,
+.theme-blue .text-slate-800,
+.theme-blue .text-slate-900,
+.theme-blue .text-slate-600,
+.theme-blue .text-slate-650 {
+  color: #0369a1 !important;
+}
+.theme-blue .text-slate-500,
+.theme-blue .text-slate-400,
+.theme-blue .text-slate-350 {
+  color: #0284c7 !important;
+}
+.theme-blue input,
+.theme-blue select,
+.theme-blue textarea {
+  background-color: #f8fafc !important;
+  border-color: #7dd3fc !important;
+  color: #0369a1 !important;
+}
+
+/* 7. ORANGE THEME (สีส้มร่ำรวย) */
+body.theme-orange {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%) !important;
+  color: #c2410c !important;
+}
+.theme-orange .bg-white,
+.theme-orange header.bg-white\/90,
+.theme-orange footer.bg-white\/70,
+.theme-orange .bg-white\/70 {
+  background-color: #fffbf7 !important;
+}
+.theme-orange .bg-rose-50\/60,
+.theme-orange .bg-rose-50\/45,
+.theme-orange .bg-rose-50\/50,
+.theme-orange .bg-pink-50\/50,
+.theme-orange .bg-slate-50,
+.theme-orange .bg-slate-50\/50 {
+  background-color: #ffedd5 !important;
+}
+.theme-orange .border-pink-100,
+.theme-orange .border-pink-100\/70,
+.theme-orange .border-pink-100\/40,
+.theme-orange .border-pink-200,
+.theme-orange .border-slate-100,
+.theme-orange .border-slate-200 {
+  border-color: #fed7aa !important;
+}
+.theme-orange .text-slate-700,
+.theme-orange .text-slate-800,
+.theme-orange .text-slate-900,
+.theme-orange .text-slate-600,
+.theme-orange .text-slate-650 {
+  color: #c2410c !important;
+}
+.theme-orange .text-slate-500,
+.theme-orange .text-slate-400,
+.theme-orange .text-slate-350 {
+  color: #ea580c !important;
+}
+.theme-orange input,
+.theme-orange select,
+.theme-orange textarea {
+  background-color: #fffbf7 !important;
+  border-color: #fdba74 !important;
+  color: #c2410c !important;
+}
+
+/* 8. BROWN THEME (สีน้ำตาลเศรษฐี) */
+body.theme-brown {
+  background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 50%, #e7e5e4 100%) !important;
+  color: #78350f !important;
+}
+.theme-brown .bg-white,
+.theme-brown header.bg-white\/90,
+.theme-brown footer.bg-white\/70,
+.theme-brown .bg-white\/70 {
+  background-color: #fafaf9 !important;
+}
+.theme-brown .bg-rose-50\/60,
+.theme-brown .bg-rose-50\/45,
+.theme-brown .bg-rose-50\/50,
+.theme-brown .bg-pink-50\/50,
+.theme-brown .bg-slate-50,
+.theme-brown .bg-slate-50\/50 {
+  background-color: #f5f5f4 !important;
+}
+.theme-brown .border-pink-100,
+.theme-brown .border-pink-100\/70,
+.theme-brown .border-pink-100\/40,
+.theme-brown .border-pink-200,
+.theme-brown .border-slate-100,
+.theme-brown .border-slate-200 {
+  border-color: #d6d3d1 !important;
+}
+.theme-brown .text-slate-700,
+.theme-brown .text-slate-800,
+.theme-brown .text-slate-900,
+.theme-brown .text-slate-600,
+.theme-brown .text-slate-650 {
+  color: #78350f !important;
+}
+.theme-brown .text-slate-500,
+.theme-brown .text-slate-400,
+.theme-brown .text-slate-350 {
+  color: #a16207 !important;
+}
+.theme-brown input,
+.theme-brown select,
+.theme-brown textarea {
+  background-color: #fafaf9 !important;
+  border-color: #ccc1b9 !important;
+  color: #78350f !important;
+}
+
+/* 9. GREEN THEME (สีเขียวเหนี่ยวทรัพย์) */
+body.theme-green {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%) !important;
+  color: #15803d !important;
+}
+.theme-green .bg-white,
+.theme-green header.bg-white\/90,
+.theme-green footer.bg-white\/70,
+.theme-green .bg-white\/70 {
+  background-color: #f6fdf9 !important;
+}
+.theme-green .bg-rose-50\/60,
+.theme-green .bg-rose-50\/45,
+.theme-green .bg-rose-50\/50,
+.theme-green .bg-pink-50\/50,
+.theme-green .bg-slate-50,
+.theme-green .bg-slate-50\/50 {
+  background-color: #dcfce7 !important;
+}
+.theme-green .border-pink-100,
+.theme-green .border-pink-100\/70,
+.theme-green .border-pink-100\/40,
+.theme-green .border-pink-200,
+.theme-green .border-slate-100,
+.theme-green .border-slate-200 {
+  border-color: #bbf7d0 !important;
+}
+.theme-green .text-slate-700,
+.theme-green .text-slate-800,
+.theme-green .text-slate-900,
+.theme-green .text-slate-600,
+.theme-green .text-slate-650 {
+  color: #15803d !important;
+}
+.theme-green .text-slate-500,
+.theme-green .text-slate-400,
+.theme-green .text-slate-350 {
+  color: #16a34a !important;
+}
+.theme-green input,
+.theme-green select,
+.theme-green textarea {
+  background-color: #f6fdf9 !important;
+  border-color: #86efac !important;
+  color: #15803d !important;
+}
+
+/* 10. YELLOW THEME (สีเหลืองทองคำ) */
+body.theme-yellow {
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 50%, #fef08a 100%) !important;
+  color: #a16207 !important;
+}
+.theme-yellow .bg-white,
+.theme-yellow header.bg-white\/90,
+.theme-yellow footer.bg-white\/70,
+.theme-yellow .bg-white\/70 {
+  background-color: #fefdf0 !important;
+}
+.theme-yellow .bg-rose-50\/60,
+.theme-yellow .bg-rose-50\/45,
+.theme-yellow .bg-rose-50\/50,
+.theme-yellow .bg-pink-50\/50,
+.theme-yellow .bg-slate-50,
+.theme-yellow .bg-slate-50\/50 {
+  background-color: #fef9c3 !important;
+}
+.theme-yellow .border-pink-100,
+.theme-yellow .border-pink-100\/70,
+.theme-yellow .border-pink-100\/40,
+.theme-yellow .border-pink-200,
+.theme-yellow .border-slate-100,
+.theme-yellow .border-slate-200 {
+  border-color: #fef08a !important;
+}
+.theme-yellow .text-slate-700,
+.theme-yellow .text-slate-800,
+.theme-yellow .text-slate-900,
+.theme-yellow .text-slate-600,
+.theme-yellow .text-slate-650 {
+  color: #a16207 !important;
+}
+.theme-yellow .text-slate-500,
+.theme-yellow .text-slate-400,
+.theme-yellow .text-slate-350 {
+  color: #ca8a04 !important;
+}
+.theme-yellow input,
+.theme-yellow select,
+.theme-yellow textarea {
+  background-color: #fefdf0 !important;
+  border-color: #fde047 !important;
+  color: #a16207 !important;
+}
+
+/* Custom cute scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fff5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbcfe8;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f9a8d4;
+}
