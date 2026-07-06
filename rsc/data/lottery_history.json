@@ -1,0 +1,40 @@
+{
+  "thai": [
+    { "drawDate": "1 ก.ค. 2569", "top3": "503", "bottom2": "89", "top2": "03" },
+    { "drawDate": "16 มิ.ย. 2569", "top3": "504", "bottom2": "31", "top2": "04" },
+    { "drawDate": "1 มิ.ย. 2569", "top3": "593", "bottom2": "42", "top2": "93" },
+    { "drawDate": "16 พ.ค. 2569", "top3": "690", "bottom2": "60", "top2": "90" },
+    { "drawDate": "2 พ.ค. 2569", "top3": "906", "bottom2": "17", "top2": "06" },
+    { "drawDate": "16 เม.ย. 2569", "top3": "598", "bottom2": "79", "top2": "98" },
+    { "drawDate": "1 เม.ย. 2569", "top3": "072", "bottom2": "30", "top2": "72" }
+  ],
+  "lao": [
+    { "drawDate": "3 ก.ค. 2569", "top3": "481", "bottom2": "72", "top2": "81" },
+    { "drawDate": "1 ก.ค. 2569", "top3": "290", "bottom2": "54", "top2": "90" },
+    { "drawDate": "29 มิ.ย. 2569", "top3": "703", "bottom2": "81", "top2": "03" },
+    { "drawDate": "26 มิ.ย. 2569", "top3": "412", "bottom2": "32", "top2": "12" },
+    { "drawDate": "24 มิ.ย. 2569", "top3": "887", "bottom2": "91", "top2": "87" },
+    { "drawDate": "22 มิ.ย. 2569", "top3": "095", "bottom2": "56", "top2": "95" }
+  ],
+  "hanoi_special": [
+    { "drawDate": "3 ก.ค. 2569", "top3": "719", "bottom2": "28", "top2": "19" },
+    { "drawDate": "2 ก.ค. 2569", "top3": "348", "bottom2": "94", "top2": "48" },
+    { "drawDate": "1 ก.ค. 2569", "top3": "148", "bottom2": "29", "top2": "48" },
+    { "drawDate": "30 มิ.ย. 2569", "top3": "952", "bottom2": "67", "top2": "52" },
+    { "drawDate": "29 มิ.ย. 2569", "top3": "314", "bottom2": "05", "top2": "14" }
+  ],
+  "hanoi_normal": [
+    { "drawDate": "3 ก.ค. 2569", "top3": "524", "bottom2": "81", "top2": "24" },
+    { "drawDate": "2 ก.ค. 2569", "top3": "109", "bottom2": "37", "top2": "09" },
+    { "drawDate": "1 ก.ค. 2569", "top3": "715", "bottom2": "44", "top2": "15" },
+    { "drawDate": "30 มิ.ย. 2569", "top3": "202", "bottom2": "89", "top2": "02" },
+    { "drawDate": "29 มิ.ย. 2569", "top3": "881", "bottom2": "70", "top2": "81" }
+  ],
+  "hanoi_vip": [
+    { "drawDate": "3 ก.ค. 2569", "top3": "632", "bottom2": "19", "top2": "32" },
+    { "drawDate": "2 ก.ค. 2569", "top3": "981", "bottom2": "40", "top2": "81" },
+    { "drawDate": "1 ก.ค. 2569", "top3": "639", "bottom2": "91", "top2": "39" },
+    { "drawDate": "30 มิ.ย. 2569", "top3": "048", "bottom2": "23", "top2": "48" },
+    { "drawDate": "29 มิ.ย. 2569", "top3": "527", "bottom2": "76", "top2": "27" }
+  ]
+}
